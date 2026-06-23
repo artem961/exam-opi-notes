@@ -1,6 +1,6 @@
 site_name: Конспект к экзамену
 # Project Pages: https://<username>.github.io/<repo>/  — подставь свой USERNAME (и repo, если не notes)
-site_url: https://USERNAME.github.io/notes/
+site_url: https://artem961.github.io/exam-opi-notes/
 
 theme:
   name: material
