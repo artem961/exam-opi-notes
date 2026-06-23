@@ -16,6 +16,6 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       - uses: astral-sh/setup-uv@v5
-      - run: uv pip install --system -r requirements.txt
-      - run: mkdocs build --strict          # проверка перед публикацией
-      - run: mkdocs gh-deploy --force        # сборка + push в ветку gh-pages
+      - run: uv venv && uv pip install -r requirements.txt
+      - run: uv run mkdocs build --strict
+      - run: uv run mkdocs gh-deploy --force
