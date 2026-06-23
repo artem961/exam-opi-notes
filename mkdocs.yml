@@ -1,5 +1,4 @@
-site_name: Конспект к экзамену
-# Project Pages: https://<username>.github.io/<repo>/  — подставь свой USERNAME (и repo, если не notes)
+site_name: Конспект по ОПИ
 site_url: https://artem961.github.io/exam-opi-notes/
 
 theme:
@@ -19,7 +18,6 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
-    - toc.follow
     - search.suggest
     - search.highlight
     - content.code.copy
@@ -37,6 +35,9 @@ markdown_extensions:
 plugins:
   - search:
       lang: ru          # русская морфология поиска — критично для билетов
+
+extra_css:
+  - stylesheets/extra.css
 
 extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
