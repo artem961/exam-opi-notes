@@ -1,0 +1,21 @@
+name: ci
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+env:
+  NO_MKDOCS_2_WARNING: "1"     # глушим баннер Material про MkDocs 2.0
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - uses: astral-sh/setup-uv@v5
+      - run: uv pip install --system -r requirements.txt
+      - run: mkdocs build --strict          # проверка перед публикацией
+      - run: mkdocs gh-deploy --force        # сборка + push в ветку gh-pages

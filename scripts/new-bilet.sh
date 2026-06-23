@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# Создаёт новый билет из шаблона.
+# Использование: ./scripts/new-bilet.sh NN slug "Заголовок"
+set -euo pipefail
+
+NUM="${1:?usage: new-bilet.sh NN slug \"Заголовок\"}"
+SLUG="${2:?нужен slug (латиницей через дефис)}"
+TITLE="${3:?нужен заголовок в кавычках}"
+
+PADDED="$(printf '%02d' "$NUM")"
+FILE="docs/${PADDED}-${SLUG}.md"
+
+if [ -e "$FILE" ]; then
+  echo "уже существует: $FILE" >&2
+  exit 1
+fi
+
+cat > "$FILE" <<TPL
+# Билет ${NUM}. ${TITLE}
+
+!!! note "Определение"
+    …
+
+## Суть
+
+…
+
+## Ключевые моменты
+
+- …
+
+!!! warning "Частая ошибка"
+    …
+TPL
+
+echo "создан: $FILE"
