@@ -1,41 +1,43 @@
-# Конспект к экзамену
+# Конспект к экзамену по ОПИ
 
-Markdown-конспект → статический сайт (MkDocs Material) → GitHub Pages.
+Сборник билетов в формате Markdown, опубликованный как статический сайт.
 
-## Быстрый старт (локально)
+**Сайт:** [artem961.github.io/exam-opi-notes](https://artem961.github.io/exam-opi-notes/)
+
+---
+
+## Как устроен конспект
+
+```
+docs/
+  index.md        — главная страница
+  01-slug.md      — билет 1 (номер определяет порядок в сайдбаре)
+  02-slug.md      — билет 2
+  …
+  assets/         — картинки и вложения
+```
+
+Каждый билет — отдельный Markdown-файл. Определения, теоремы и типичные ошибки оформлены цветными блоками, формулы — LaTeX через MathJax. Поиск по сайту поддерживает русскую морфологию.
+
+Сайт собирается из Markdown инструментом [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) и автоматически публикуется на GitHub Pages при каждом push в `main`.
+
+---
+
+## Нашли ошибку или хотите дополнить?
+
+Приветствуются любые правки — опечатки, фактические ошибки, пропущенные формулировки.
+
+1. Сделайте форк репозитория.
+2. Внесите изменения в файл билета в папке `docs/`.
+3. Откройте Pull Request в этот репозиторий.
+
+Небольшие правки (опечатка, формула, пара строк) можно вносить прямо через GitHub — кнопка редактирования есть на странице любого файла.
+
+---
+
+## Локальный запуск
 
 ```bash
-pip install -r requirements.txt    # или uv pip install -r requirements.txt
-mkdocs serve                       # http://127.0.0.1:8000
-```
-
-Пиши билеты в `docs/` (см. `CLAUDE.md` — там соглашения и правила).
-
-## Первый деплой на GitHub Pages
-
-1. Подставь свой `USERNAME` в `mkdocs.yml` → `site_url`
-   (`https://USERNAME.github.io/notes/`; если репо назван не `notes` — поправь и путь).
-2. Создай репозиторий на GitHub и запушь:
-   ```bash
-   git init && git add . && git commit -m "init"
-   git branch -M main
-   git remote add origin git@github.com:USERNAME/notes.git
-   git push -u origin main
-   ```
-3. Пуш запустит CI (`.github/workflows/ci.yml`): он соберёт сайт и запушит
-   статику в ветку `gh-pages`.
-4. В репозитории: **Settings → Pages → Source → ветка `gh-pages`**.
-5. Через ~минуту сайт живёт на `https://USERNAME.github.io/notes/`.
-
-Дальше каждый `git push` в `main` пересобирает и публикует автоматически.
-
-## Структура
-
-```
-docs/          конспект (Markdown)
-mkdocs.yml     конфиг сайта
-deploy/PAGES.md  заметки по деплою
-scripts/       хелперы
-CLAUDE.md      правила для агента Claude Code
-ECOSYSTEM.md   контекст по версии MkDocs (почему запинено)
+pip install -r requirements.txt
+mkdocs serve          # предпросмотр на http://127.0.0.1:8000
 ```
