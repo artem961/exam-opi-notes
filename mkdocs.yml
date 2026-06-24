@@ -38,7 +38,9 @@ markdown_extensions:
 
 plugins:
   - search:
-      lang: ru          # русская морфология поиска — критично для билетов
+      lang:
+        - ru
+        - en
 
 extra_css:
   - stylesheets/extra.css
