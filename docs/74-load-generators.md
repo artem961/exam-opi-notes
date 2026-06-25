@@ -30,6 +30,8 @@ Soak test:   длительная нагрузка (часы, дни)
 
 ### Популярные нагрузчики
 
+![Инструменты нагрузочного тестирования: HP LoadRunner, LoadComplete, IBM Rational Performance Tester, LoadUI Pro, Apache JMeter, The Grinder, Tsung](assets/lec-load-testing-tools-jmeter-loadrunner-grinder.png)
+
 | Инструмент | Язык сценариев | Особенности |
 |-----------|----------------|-------------|
 | **Apache JMeter** | XML (GUI) + Groovy | Desktop GUI, богатые плагины, HTTP/JDBC/FTP |

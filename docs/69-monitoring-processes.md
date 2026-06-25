@@ -4,6 +4,8 @@
 
 ### Состояния процесса
 
+![Диспетчер процессов CPU: состояния RUNNABLE / ON CPU (%USR, %SYS) / WAIT FOR SMTHG, переключение контекста (voluntary / involuntary)](assets/lec-cpu-process-dispatcher-states-context-switch.png)
+
 ```
 Создан
   ↓

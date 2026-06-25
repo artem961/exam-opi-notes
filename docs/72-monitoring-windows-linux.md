@@ -4,6 +4,8 @@
 
 ### Linux — основные инструменты
 
+![Linux Performance Observability Tools: карта инструментов мониторинга по подсистемам ОС (Brendan Gregg)](assets/lec-performance-monitoring-linux-observability-tools.png)
+
 | Инструмент | Что мониторит | Пример |
 |-----------|---------------|--------|
 | `top` / `htop` | CPU, RAM по процессам | `top -d 1` |
@@ -16,6 +18,8 @@
 | `dmesg` | Сообщения ядра (OOM, ошибки) | `dmesg -T | tail -20` |
 
 ### Windows — основные инструменты
+
+![Мониторинг Windows: Task Manager, Resource Monitor, Performance Monitor, Reliability Monitor, Microsoft SysInternals](assets/lec-performance-monitoring-windows-tools.png)
 
 | Инструмент | Что мониторит |
 |-----------|---------------|
