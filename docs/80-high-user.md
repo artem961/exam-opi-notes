@@ -83,7 +83,7 @@ String s = sb.toString();
 byte[] json = objectMapper.writeValueAsBytes(obj);
 
 // Protobuf: компактнее, быстрее (3–10×)
-byte[] proto = obj.toProteObuf().toByteArray();
+byte[] proto = obj.toProtobuf().toByteArray();
 ```
 
 ---
