@@ -1,3 +1,6 @@
+!!! danger "ВНИМАНИЕ"
+    Теперь использование данного конспекта является платным. I am Michael from Microsoft support, send 5000$ to my PayPal account
+
 # Билет 22. Disciplined Agile 2.X (2013)
 
 ## Ответ
