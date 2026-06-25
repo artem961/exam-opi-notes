@@ -1,6 +1,3 @@
-!!! danger "ВНИМАНИЕ"
-    Теперь использование данного конспекта является платным. I am Michael from Microsoft support, send 5000$ to my PayPal account
-
 # Билет 15. *UP методологии. RUP: основы процесса
 
 ## Ответ

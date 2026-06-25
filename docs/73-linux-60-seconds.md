@@ -1,6 +1,3 @@
-!!! danger "ВНИМАНИЕ"
-    Теперь использование данного конспекта является платным. I am Michael from Microsoft support, send 5000$ to my PayPal account
-
 # Билет 73. Системный анализ Linux «за 60 секунд»
 
 ## Ответ
