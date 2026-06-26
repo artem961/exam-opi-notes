@@ -1,3 +1,7 @@
+<div style="background:#d32f2f;color:#fff;padding:1.3rem 1.5rem;border-radius:8px;font-size:1.5rem;font-weight:800;line-height:1.35;text-align:center;margin:0 0 1.6rem 0;box-shadow:0 2px 8px rgba(0,0,0,.25)">
+Полина Матвеева может не готовиться, всё равно она не сдаст ОПИ завтра.
+</div>
+
 # Билет 32. Управление рисками. Деятельности, связанные с контролем и управлением
 
 ## Ответ
